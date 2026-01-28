@@ -67,11 +67,50 @@ CREATE TABLE medical_records (
 
 -- Insert Mock Data for Testing
 INSERT INTO users (email, password, role, full_name) VALUES 
-('admin@medictrack.com', 'password123', 'ADMIN', 'Dr. Admin'),
-('ayesha@medictrack.com', 'password123', 'DOCTOR', 'Dr. Ayesha Rao'),
-('smith@medictrack.com', 'password123', 'DOCTOR', 'Dr. John Smith');
+('admin@medictrack.com', 'admin123', 'ADMIN', 'Dr. Admin'),
+('ayesha@medictrack.com', 'admin123', 'DOCTOR', 'Dr. Ayesha Rao'),
+('smith@medictrack.com', 'admin123', 'DOCTOR', 'Dr. John Smith');
 
 INSERT INTO patients (full_name, dob, medical_condition, status, last_visit, assigned_doctor_id) VALUES 
 ('Sarah Jenkins', '1990-05-15', 'Hypertension', 'Stable', '2023-10-24', 2),
 ('Michael Chen', '1966-02-10', 'Type 2 Diabetes', 'Attention', '2023-10-22', 2),
 ('Robert Wilson', '1979-11-30', 'Post-Op Recovery', 'Critical', '2023-10-25', 3);
+USE medictrack;
+
+-- Create patients table
+CREATE TABLE IF NOT EXISTS patients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    dob DATE,
+    gender VARCHAR(10),
+    phone VARCHAR(20),
+    address TEXT,
+    medical_condition VARCHAR(255),
+    status VARCHAR(50) DEFAULT 'Active',
+    last_visit TIMESTAMP,
+    assigned_doctor_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create appointments table  
+CREATE TABLE IF NOT EXISTS appointments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT,
+    doctor_id INT,
+    appointment_time TIMESTAMP,
+    type VARCHAR(50),
+    status VARCHAR(50) DEFAULT 'Scheduled',
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create staff_details table
+CREATE TABLE IF NOT EXISTS staff_details (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    department VARCHAR(100),
+    specialty VARCHAR(100),
+    shift_start TIME,
+    shift_end TIME,
+    status VARCHAR(50) DEFAULT 'Active'
+);

@@ -8,7 +8,7 @@
         <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Patients - MedicTrack</title>
+            <title>Patients Test - MedicTrack</title>
             <!-- Tailwind CSS -->
             <script src="https://cdn.tailwindcss.com"></script>
             <!-- Lucide Icons -->
@@ -33,28 +33,50 @@
 
                             <% // Mock Data for Patients matches the React example List<Map<String, String>> patients =
                                 new ArrayList<>();
-                                    Map<String, String> p1 = new HashMap<>(); p1.put("id", "PT-001"); p1.put("name",
-                                            "Sarah Jenkins"); p1.put("age", "34"); p1.put("condition", "Hypertension");
-                                            p1.put("status", "Stable"); p1.put("lastVisit", "2023-10-24");
-                                            p1.put("doctor", "Dr. Smith"); patients.add(p1);
-                                            Map<String, String> p2 = new HashMap<>(); p2.put("id", "PT-002");
-                                                    p2.put("name", "Michael Chen"); p2.put("age", "58");
-                                                    p2.put("condition", "Type 2 Diabetes"); p2.put("status",
-                                                    "Attention"); p2.put("lastVisit", "2023-10-22"); p2.put("doctor",
-                                                    "Dr. Rao"); patients.add(p2);
-                                                    Map<String, String> p3 = new HashMap<>(); p3.put("id", "PT-003");
-                                                            p3.put("name", "Emily Davis"); p3.put("age", "22");
-                                                            p3.put("condition", "Routine Checkup"); p3.put("status",
-                                                            "Discharged"); p3.put("lastVisit", "2023-10-25");
-                                                            p3.put("doctor", "Dr. Smith"); patients.add(p3);
-                                                            Map<String, String> p4 = new HashMap<>(); p4.put("id",
-                                                                    "PT-004"); p4.put("name", "Robert Wilson");
-                                                                    p4.put("age", "45"); p4.put("condition", "Post-Op Recovery"); p4.put("status", "Critical");
-                                                                    p4.put("lastVisit", "2023-10-25"); p4.put("doctor",
-                                                                    "Dr. Alverez"); patients.add(p4);
+                                    Map<String, String> p1 = new HashMap<>();
+                                            p1.put("id", "PT-001");
+                                            p1.put("name", "Sarah Jenkins");
+                                            p1.put("age", "34");
+                                            p1.put("condition", "Hypertension");
+                                            p1.put("status", "Stable");
+                                            p1.put("lastVisit", "2023-10-24");
+                                            p1.put("doctor", "Dr. Smith");
+                                            patients.add(p1);
+
+                                            Map<String, String> p2 = new HashMap<>();
+                                                    p2.put("id", "PT-002");
+                                                    p2.put("name", "Michael Chen");
+                                                    p2.put("age", "58");
+                                                    p2.put("condition", "Type 2 Diabetes");
+                                                    p2.put("status", "Attention");
+                                                    p2.put("lastVisit", "2023-10-22");
+                                                    p2.put("doctor", "Dr. Rao");
+                                                    patients.add(p2);
+
+                                                    Map<String, String> p3 = new HashMap<>();
+                                                            p3.put("id", "PT-003");
+                                                            p3.put("name", "Emily Davis");
+                                                            p3.put("age", "22");
+                                                            p3.put("condition", "Routine Checkup");
+                                                            p3.put("status", "Discharged");
+                                                            p3.put("lastVisit", "2023-10-25");
+                                                            p3.put("doctor", "Dr. Smith");
+                                                            patients.add(p3);
+
+                                                            Map<String, String> p4 = new HashMap<>();
+                                                                    p4.put("id", "PT-004");
+                                                                    p4.put("name", "Robert Wilson");
+                                                                    p4.put("age", "45");
+                                                                    p4.put("condition", "Post-Op Recovery");
+                                                                    p4.put("status", "Critical");
+                                                                    p4.put("lastVisit", "2023-10-25");
+                                                                    p4.put("doctor", "Dr. Alverez");
+                                                                    patients.add(p4);
+
                                                                     Map<String, String> p5 = new HashMap<>();
-                                                                            p5.put("id", "PT-005"); p5.put("name",
-                                                                            "Anita Patel"); p5.put("age", "29");
+                                                                            p5.put("id", "PT-005");
+                                                                            p5.put("name", "Anita Patel");
+                                                                            p5.put("age", "29");
                                                                             p5.put("condition", "Migraine");
                                                                             p5.put("status", "Stable");
                                                                             p5.put("lastVisit", "2023-10-20");

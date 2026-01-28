@@ -32,9 +32,13 @@
                         <div
                             class="flex items-center justify-center p-12 text-slate-400 bg-white rounded-xl border border-slate-100 h-96">
                             <div class="text-center">
-                                <i data-lucide="file-text" width="48" class="mx-auto mb-4 opacity-50"></i>
-                                <h3 class="text-lg font-bold">Reports Module</h3>
-                                <p>Coming Soon</p>
+                                <i data-lucide="file-text" width="48" class="mx-auto mb-4 text-teal-600"></i>
+                                <h3 class="text-lg font-bold mb-2">Patient Report</h3>
+                                <p class="mb-4 text-slate-500">Generate a PDF list of all patients.</p>
+                                <a href="report?type=patients" target="_blank"
+                                    class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">
+                                    Generate PDF
+                                </a>
                             </div>
                         </div>
                     </div>

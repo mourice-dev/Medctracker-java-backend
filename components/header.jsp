@@ -1,4 +1,26 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.medictrack.model.User" %>
+<%
+    // Get logged in user from session
+    User currentUser = (User) session.getAttribute("user");
+    
+    // Default values for guest access
+    String fullName = "Guest User";
+    String role = "Guest";
+    String initials = "GU";
+    
+    if (currentUser != null) {
+        fullName = currentUser.getFullName() != null ? currentUser.getFullName() : "User";
+        role = currentUser.getRole() != null ? currentUser.getRole() : "User";
+        // Get initials from full name
+        initials = "";
+        String[] parts = fullName.split(" ");
+        for (String part : parts) {
+            if (part.length() > 0) initials += part.substring(0, 1).toUpperCase();
+        }
+        if (initials.isEmpty()) initials = "U";
+    }
+%>
 <header
   class="h-16 bg-white border-b border-slate-200 flex justify-between items-center px-6 shadow-sm z-10">
   <button class="md:hidden text-slate-500 hover:text-slate-700">
@@ -30,11 +52,11 @@
     <div class="flex items-center pl-2 border-l border-slate-200">
       <div
         class="h-8 w-8 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold text-sm mr-2 shadow-sm ring-2 ring-teal-100">
-        DA
+        <%= initials %>
       </div>
       <div class="hidden lg:block">
-        <p class="text-sm font-bold text-slate-800">Dr. Admin</p>
-        <p class="text-xs text-slate-500">Administrator</p>
+        <p class="text-sm font-bold text-slate-800"><%= fullName %></p>
+        <p class="text-xs text-slate-500"><%= role %></p>
       </div>
     </div>
   </div>

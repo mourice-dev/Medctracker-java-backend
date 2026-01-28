@@ -43,11 +43,28 @@
       <version>3.0.1</version>
     </dependency>
 
-    <!-- MySQL JDBC Driver -->
     <dependency>
       <groupId>com.mysql</groupId>
       <artifactId>mysql-connector-j</artifactId>
       <version>8.3.0</version>
+    </dependency>
+
+    <!-- JasperReports -->
+    <!-- 
+      WARNING: CVE-2025-10492 (HIGH severity) - Java deserialization vulnerability
+      All versions <= 7.0.3 are affected. No patched community edition available yet.
+      
+      MITIGATION OPTIONS:
+      1. Remove JasperReports if reporting is not critical
+      2. Add JVM serialization filter: -Djdk.serialFilter=!*
+      3. Monitor https://community.jaspersoft.com/advisories/ for patched version
+      
+      Consider using Apache POI or iText as alternatives for simple PDF generation.
+    -->
+    <dependency>
+        <groupId>net.sf.jasperreports</groupId>
+        <artifactId>jasperreports</artifactId>
+        <version>7.0.3</version>
     </dependency>
   </dependencies>
 
