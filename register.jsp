@@ -147,7 +147,7 @@
 
                             <p class="text-center text-sm text-slate-500">
                                 Already have an account?
-                                <!-- Login link removed -->
+                                <a href="login.jsp" class="text-teal-600 hover:text-teal-700 font-medium">Sign in</a>
                             </p>
                 </div>
             </div>

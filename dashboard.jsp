@@ -1,10 +1,7 @@
-<!-- @format -->
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+  <!DOCTYPE html>
+  <html lang="en">
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %> <%@ page
-import="com.medictrack.model.User" %> <% User currentUser = (User)
-session.getAttribute("user"); // Session check removed for direct access %>
-<!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,7 +32,8 @@ session.getAttribute("user"); // Session check removed for direct access %>
             <div
               class="bg-gradient-to-r from-teal-800 to-teal-600 rounded-2xl p-8 text-white shadow-lg relative overflow-hidden">
               <div
-                class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
+                class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full transform translate-x-1/2 -translate-y-1/2">
+              </div>
               <div class="relative z-10">
                 <h2 class="text-3xl font-bold mb-2">Welcome Back, Dr. Admin</h2>
                 <p class="text-teal-100 mb-6 max-w-xl">
@@ -135,14 +133,12 @@ session.getAttribute("user"); // Session check removed for direct access %>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <!-- Chart Area -->
-              <div
-                class="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+              <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                 <div class="flex justify-between items-center mb-6">
                   <h3 class="text-lg font-bold text-slate-800">
                     Patient Admittance Analytics
                   </h3>
-                  <select
-                    class="text-sm border-slate-200 rounded-md text-slate-500 bg-slate-50 p-1">
+                  <select class="text-sm border-slate-200 rounded-md text-slate-500 bg-slate-50 p-1">
                     <option>Last 7 Days</option>
                     <option>Last Month</option>
                   </select>
@@ -150,38 +146,27 @@ session.getAttribute("user"); // Session check removed for direct access %>
                 <div
                   class="h-64 bg-slate-50 rounded-lg flex items-center justify-center border border-dashed border-slate-300 relative overflow-hidden group">
                   <div class="text-center z-10">
-                    <i
-                      data-lucide="activity"
-                      class="mx-auto text-slate-300 mb-2"
-                      width="48"
-                      height="48"></i>
+                    <i data-lucide="activity" class="mx-auto text-slate-300 mb-2" width="48" height="48"></i>
                     <p class="text-slate-400 text-sm">
                       Real-time Visualization
                     </p>
                   </div>
-                  <svg
-                    class="absolute bottom-0 left-0 right-0 h-32 w-full text-teal-100 opacity-50"
-                    viewBox="0 0 100 40"
-                    preserveAspectRatio="none">
-                    <path
-                      d="M0 40 L0 30 Q10 10 20 25 T40 15 T60 30 T80 10 T100 20 L100 40 Z"
-                      fill="currentColor" />
+                  <svg class="absolute bottom-0 left-0 right-0 h-32 w-full text-teal-100 opacity-50"
+                    viewBox="0 0 100 40" preserveAspectRatio="none">
+                    <path d="M0 40 L0 30 Q10 10 20 25 T40 15 T60 30 T80 10 T100 20 L100 40 Z" fill="currentColor" />
                   </svg>
                 </div>
               </div>
 
               <!-- Upcoming Schedule -->
-              <div
-                class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+              <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
                 <h3 class="text-lg font-bold text-slate-800 mb-4">
                   Upcoming Schedule
                 </h3>
                 <div class="space-y-4">
                   <!-- Appt 1 -->
-                  <div
-                    class="flex items-start pb-4 border-b border-slate-50 last:border-0 last:pb-0">
-                    <div
-                      class="bg-teal-50 text-teal-700 p-2 rounded-lg mr-3 text-center min-w-[60px]">
+                  <div class="flex items-start pb-4 border-b border-slate-50 last:border-0 last:pb-0">
+                    <div class="bg-teal-50 text-teal-700 p-2 rounded-lg mr-3 text-center min-w-[60px]">
                       <span class="block text-xs font-bold">09:00 AM</span>
                     </div>
                     <div>
@@ -194,10 +179,8 @@ session.getAttribute("user"); // Session check removed for direct access %>
                     </div>
                   </div>
                   <!-- Appt 2 -->
-                  <div
-                    class="flex items-start pb-4 border-b border-slate-50 last:border-0 last:pb-0">
-                    <div
-                      class="bg-teal-50 text-teal-700 p-2 rounded-lg mr-3 text-center min-w-[60px]">
+                  <div class="flex items-start pb-4 border-b border-slate-50 last:border-0 last:pb-0">
+                    <div class="bg-teal-50 text-teal-700 p-2 rounded-lg mr-3 text-center min-w-[60px]">
                       <span class="block text-xs font-bold">10:30 AM</span>
                     </div>
                     <div>
@@ -210,10 +193,8 @@ session.getAttribute("user"); // Session check removed for direct access %>
                     </div>
                   </div>
                   <!-- Appt 3 -->
-                  <div
-                    class="flex items-start pb-4 border-b border-slate-50 last:border-0 last:pb-0">
-                    <div
-                      class="bg-teal-50 text-teal-700 p-2 rounded-lg mr-3 text-center min-w-[60px]">
+                  <div class="flex items-start pb-4 border-b border-slate-50 last:border-0 last:pb-0">
+                    <div class="bg-teal-50 text-teal-700 p-2 rounded-lg mr-3 text-center min-w-[60px]">
                       <span class="block text-xs font-bold">01:00 PM</span>
                     </div>
                     <div>
@@ -241,4 +222,5 @@ session.getAttribute("user"); // Session check removed for direct access %>
       lucide.createIcons();
     </script>
   </body>
-</html>
+
+  </html>
